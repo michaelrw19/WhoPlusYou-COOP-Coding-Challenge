@@ -19,11 +19,6 @@ app.post("/user", function(req, res) {
         province: req.body.province,
         country: req.body.country
     }
-    const response = {
-        error: false
-    }
-    res.send(response)
-
     /*
         Using npm i mysql to send data to the database
 
@@ -36,6 +31,12 @@ app.post("/user", function(req, res) {
         });
     
     */
+    const response = {
+        error: false //If no error response from database, set this property to false, otherwise true
+    }
+    //Tell the frontend data successfully submitted to db
+    res.send(response)
+
 })
 
 app.listen("8000", function() {

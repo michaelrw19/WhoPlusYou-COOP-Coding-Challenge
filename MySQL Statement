@@ -2,10 +2,10 @@
 
 INSERT INTO userTable (FirstName, LastName, Email, Password, PhoneNumber, Address, City, Province, Country) VALUES ("John", "Doe", "johndoe@gmail.com", "4164051233", "53 Routliffe Lane", "Toronto", "Ontario", "Canada")
 
-//Insert using npm i mysql (react solution)
+//Insert using npm i mysql (first solution)
 
 connection.query("INSERT INTO userTable (FirstName, LastName, Email, Password, PhoneNumber, Address, City, Province, Country) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [user.firstName, user.lastName, user.email, user.password, user.phoneNumber, user.address, user.city, user.province, user.country])
 
-//Insert using PHP $_POST superglobal Arrays (html and php solution)
+//Insert using PHP $_POST superglobal Arrays (second solution)
 
 INSERT INTO userTable (FirstName, LastName, Email, Password, PhoneNumber, Address, City, Province, Country) VALUES ($_POST["firstName"], $_POST["lastName"], $_POST["email"], $_POST["phoneNumber"], $_POST["address"], $_POST["city"], $_POST["province"], $_POST["country"])
