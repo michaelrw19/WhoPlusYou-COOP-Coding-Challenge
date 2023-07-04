@@ -1,6 +1,6 @@
 //Insert using string 
 
-INSERT INTO userTable (FirstName, LastName, Email, Password, PhoneNumber, Address, City, Province, Country) VALUES ("John", "Doe", "johndoe@gmail.com", "4164051233", "53 Routliffe Lane", "Toronto", "Ontario", "Canada")
+INSERT INTO userTable (FirstName, LastName, Email, Password, PhoneNumber, Address, City, Province, Country) VALUES ("John", "Doe", "johndoe@gmail.com", "+14164051233", "53 Routliffe Lane", "Toronto", "Ontario", "Canada")
 
 //Insert using npm i mysql (first solution)
 
