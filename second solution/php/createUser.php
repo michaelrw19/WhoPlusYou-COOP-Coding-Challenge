@@ -8,31 +8,7 @@
 </head>
 <body>
 <?php
-    class User {
-        public $firstName;
-        public $lastName;
-        public $email;
-        public $phoneNumber;
-        public $address;
-        public $city;
-        public $province;
-        public $country;
-
-        function __construct($firstName, $lastName, $email, $phoneNumber, $address, $city, $province, $country) {
-            $this->firstName = $firstName;
-            $this->lastName = $lastName;
-            $this->email = $email;
-            $this->phoneNumber = $phoneNumber;
-            $this->address = $address;
-            $this->city = $city;
-            $this->province = $province;
-            $this->country = $country;
-        }
-
-        function getAllProperty() {
-            return $this->firstName . " " . $this->lastName . " " . $this->email . " " . $this->phoneNumber . " " . $this->address . " " . $this->city . " " . $this->province . " " . $this->country;
-        }
-    }
+    include "User.php";
 
     $firstName = $_POST["firstName"];
     $lastName = $_POST["lastName"];
