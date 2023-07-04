@@ -4,11 +4,11 @@ This is the first solution of the coding challenge. In this solution, I used Rea
 
 To run the app:
 1. Using the terminal, go to the following directory: first solution\client\wpy-coop-coding-challenge
-2. Run "npm install"
+2. Run "npm install" (around 2 min)
 3. Run "npm start"
 
 4. Using the terminal, go to the following directory: first solution\server
 5. Run "npm install"
 6. Run "node index.js"
 
-7. Open http://localhost:3000 to view it in your browser.
+7. Open http://localhost:3000 or on you own network (shown when you run npm start) to view it in your browser.
