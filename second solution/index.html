@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>Form</title>
+</head>
+<body class="d-flex justify-content-center">
+    <div class="card py-3 m-5 shadow-sm rounded w-75">
+        <p class="h3 my-0 text-center" id="title">Register Account</p>
+        <div class="mx-5">
+            <form action="http://localhost:8000/createUser.php" method="POST" novalidate>
+                <hr>
+                <div class="mx-4">
+                    <div class="row my-md-3 my-lg-3">
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-control" placeholder="Enter First Name" name="firstName" id="firstName" maxlength=255 required>
+                            <div class="errorMessage">
+                                Please enter a valid first name
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Last Name" name="lastName" id="lastName" maxlength=255 required>
+                            <div class="errorMessage">
+                                Please enter a valid last name
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-md-3 my-lg-3">
+                        <div class="col-12 col-lg-5 mb-3 mb-lg-0">
+                            <label class="form-label">Email</label>
+                            <input type="text" class="form-control" placeholder="Enter Email" name="email" id="email" maxlength=320 required>
+                            <div class="errorMessage">
+                                Please enter a valid email
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-0">
+                            <label class="form-label">Password</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend" id="passwordInfoIcon">
+                                    <span class="input-group-text px-2">
+                                        <button type="button"  id="infoIconButton">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                </div>
+                                <div id="passwordInfo">
+                                    Password should be 8-16 characters and consist of at least 1 lowercase, 1 uppercase, 1 symbol, and 1 number
+                                </div>
+                                <input type="password" class="form-control inputWithPrefix" placeholder="Enter Password" name="password" id="password" maxlength=16 required>
+                            </div>
+                            <div class="errorMessage">
+                                Please enter a valid password
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+                            <label class="form-label">Phone Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text px-2">+1</span>
+                                </div>
+                                <input type="text" class="form-control inputWithPrefix" placeholder="Enter Phone Number" name="phoneNumber" id="phoneNumber" maxlength="10" required>
+                            </div>
+                            <div class="errorMessage" id="phoneNumberErrorMessage">
+                                Please enter a valid phone number
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-md-3 my-lg-3">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="form-label">Address</label>
+                            <input type="text" class="form-control" placeholder="Enter Address" name="address" id="address" required>
+                            <div class="errorMessage">
+                                Please enter a valid address
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-md-3 my-lg-3 ">
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <label class="form-label">City</label>
+                            <input type="text" class="form-control" placeholder="Enter City" name="city" id="city" required>
+                            <div class="errorMessage">
+                                Please enter a valid city
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <label class="form-label">Province</label>
+                            <select class="form-select" name="province" id="province">
+                                <option selected hidden value=" ">Select Province</option>
+                                <optgroup label="Canada" id="caProvince">
+                                    <!--options created in index.js-->
+                                </optgroup>
+                                <optgroup label="USA" id="usProvince">
+                                    <!--options created in index.js-->
+                                </optgroup>
+                            </select>
+                            <div class="errorMessage">
+                                Please select a province
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Country</label>
+                            <select class="form-select" name="country" id="country">
+                                <option selected hidden value=" ">Select Country</option>
+                                <option value="Canada">Canada</option>
+                                <option value="USA">USA</option>
+                            </select>
+                            <div class="errorMessage">
+                                Please select a country
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container px-4">
+                    <div class="float-end grid">
+                        <button type="button" id="submitButton" class="btn btn-success float-right">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

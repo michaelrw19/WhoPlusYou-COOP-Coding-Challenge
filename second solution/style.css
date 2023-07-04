@@ -1,0 +1,50 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+select:-webkit-autofill,
+select:-webkit-autofill:hover, 
+select:-webkit-autofill:focus, 
+select:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.errorMessage {
+    display: none;      /*To be changed in index.js*/
+    margin-left: 14px;
+    font-size: 0.9rem;
+    color: red
+}
+
+.form-select{
+    color: gray
+}
+
+.input-group-text { 
+    border-radius: var(--bs-border-radius) 0px 0px var(--bs-border-radius); /*Only apply border to left top and bottom*/
+}
+
+button#infoIconButton {
+    border: none;
+    background-color: transparent;
+    padding: 0px;
+}
+
+div#passwordInfo {
+    display: none;
+    position: absolute;
+    top: 40px;
+
+    padding: 5px;
+    background-color: white;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border-radius: var(--bs-border-radius)!important;
+    border-color: #ebecfe;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 0.7rem;
+    z-index: 1;
+
+}
