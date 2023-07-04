@@ -13,7 +13,7 @@
             $this->firstName = $firstName;
             $this->lastName = $lastName;
             $this->email = $email;
-            $this->phoneNumber = $phoneNumber;
+            $this->phoneNumber = "+1".$phoneNumber;
             $this->address = $address;
             $this->city = $city;
             $this->province = $province;

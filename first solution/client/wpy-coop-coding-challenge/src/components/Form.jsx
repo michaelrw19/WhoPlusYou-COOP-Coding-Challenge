@@ -236,7 +236,7 @@ function Form() {
         lastName: lastName,
         email: email,
         password: password,
-        phoneNumber: phoneNumber,
+        phoneNumber: "+1" + phoneNumber,
         address: address,
         city: city,
         province: province,
