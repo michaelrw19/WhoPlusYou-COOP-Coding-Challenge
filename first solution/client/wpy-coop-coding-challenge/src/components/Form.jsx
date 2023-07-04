@@ -405,6 +405,7 @@ function Form() {
             sx={{
               gridColumn: "span 12"
             }}
+            inputProps= {{ maxLength: 255 }}
             onChange={addressHandler}
             onBlur={addressHandler}
             error={addressError}
@@ -418,6 +419,7 @@ function Form() {
             sx={{
               gridColumn: tablet ? "span 12" : "span 4"
             }}
+            inputProps= {{ maxLength: 255 }}
             onChange={cityHandler}
             onBlur={cityHandler}
             error={cityError}
