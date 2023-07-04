@@ -1,0 +1,36 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.formContainer {
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.buttonContainer {
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 0px 20px 20px 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}

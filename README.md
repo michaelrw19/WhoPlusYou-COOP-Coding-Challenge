@@ -1,1 +1,0 @@
-# WhoPlusYou-COOP-Coding-Challenge
