@@ -506,8 +506,8 @@ function Form() {
               onChange={countryHandler}
               onClick={countryOnClick}
             >
-              <MenuItem value="Canada" disabled={country === "USA"}>Canada</MenuItem>
-              <MenuItem value="USA" disabled={country === "Canada"}>USA</MenuItem>
+              <MenuItem value="Canada" disabled={country === "USA" && province !== ""}>Canada</MenuItem>
+              <MenuItem value="USA" disabled={country === "Canada" && province !== ""}>USA</MenuItem>
             </Select>
             <FormHelperText 
               error={countryError}

@@ -45,10 +45,7 @@
     
     $newUser = new User($firstName, $lastName, $email, $phoneNumber, $address, $city, $province, $country);
 
-    /*
-    INSERT INTO userTable (FirstName, LastName, Email, Password, PhoneNumber, Address, City, Province, Country) VALUES ($_POST["firstName"], $_POST["lastName"], $_POST["email"], $_POST["phoneNumber"], $_POST["address"], $_POST["city"], $_POST["province"], $_POST["country"])
-    */
-
+    $newUser->insert();
 
     print("
         <div class='px-4 py-5 my-5 text-center'>
