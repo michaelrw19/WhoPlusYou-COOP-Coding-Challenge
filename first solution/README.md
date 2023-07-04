@@ -10,3 +10,5 @@ To run the app:
 4. Using the terminal, go to the following directory: first solution\server
 5. Run "npm install"
 6. Run "node index.js"
+
+7. Open http://localhost:3000 to view it in your browser.
